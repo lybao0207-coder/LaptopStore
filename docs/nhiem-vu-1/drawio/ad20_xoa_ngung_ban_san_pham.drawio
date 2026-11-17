@@ -1,0 +1,38 @@
+<mxfile host="LaptopShop-NV1" type="device">
+<diagram id="ad20_xoa_ngung_ban_san_pham" name="AD20 – Admin xóa / ngừng kinh doanh sản phẩm (UC17)">
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" math="0" shadow="0">
+<root>
+<mxCell id="0"/>
+<mxCell id="1" parent="0"/>
+<mxCell id="c11" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F9FF;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="0.0" y="0.0" width="194.0" height="684.7" as="geometry"/></mxCell>
+<mxCell id="c12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FBFBF2;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="204.0" y="0.0" width="264.0" height="684.7" as="geometry"/></mxCell>
+<mxCell id="c13" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF4;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="478.0" y="0.0" width="384.0" height="684.7" as="geometry"/></mxCell>
+<mxCell id="c14" value="&lt;b&gt;Quản trị viên&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="72.0" y="8.0" width="114.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c15" value="" style="ellipse;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="87.0" y="69.0" width="20.0" height="20.0" as="geometry"/></mxCell>
+<mxCell id="c16" value="Bấm Xóa một sản phẩm, xác nhận" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="8.0" y="114.0" width="178.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c17" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="162.0" y="627.0" width="24.0" height="24.0" as="geometry"/></mxCell>
+<mxCell id="c18" value="&lt;b&gt;Hệ thống (Servlet)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="259.0" y="8.0" width="154.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c19" value="Sản phẩm đã có trong đơn hàng?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1"><mxGeometry x="212.0" y="244.0" width="248.0" height="52.0" as="geometry"/></mxCell>
+<mxCell id="c20" value="Thông báo: SP đã có đơn nên chỉ chuyển Ngừng kinh doanh" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="293.5" y="460.0" width="167.0" height="44.0" as="geometry"/></mxCell>
+<mxCell id="c21" value="Xóa các file ảnh trên ổ đĩa" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="221.5" y="412.0" width="143.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c22" value="Thông báo xóa thành công" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="212.5" y="516.0" width="165.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c23" value="" style="rhombus;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1"><mxGeometry x="282.5" y="577.0" width="25.0" height="25.0" as="geometry"/></mxCell>
+<mxCell id="c24" value="&lt;b&gt;CSDL (SQL Server)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="486.0" y="8.0" width="154.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c25" value="COUNT(*) FROM ChiTietDonHang WHERE MaSanPham = ?" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#EAF4EA;strokeColor=#5E9B5E;" vertex="1" parent="1"><mxGeometry x="486.5" y="175.0" width="151.0" height="44.0" as="geometry"/></mxCell>
+<mxCell id="c26" value="UPDATE SanPham SET TrangThai = NGUNG_BAN, NgayCapNhat" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#EAF4EA;strokeColor=#5E9B5E;" vertex="1" parent="1"><mxGeometry x="486.0" y="337.0" width="162.0" height="44.0" as="geometry"/></mxCell>
+<mxCell id="c27" value="DELETE SanPham (CSDL tự xóa HinhAnhSanPham, SanPhamKhuyenMai, GioHang theo ON DELETE CASCADE)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#EAF4EA;strokeColor=#5E9B5E;" vertex="1" parent="1"><mxGeometry x="670.0" y="331.0" width="184.0" height="56.0" as="geometry"/></mxCell>
+<mxCell id="c28" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c15" target="c16"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c29" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c16" target="c25"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c30" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c25" target="c19"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c31" value="[Có]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c19" target="c26"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c32" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c26" target="c20"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c33" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c20" target="c23"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="380.7" y="555.2"/></Array></mxGeometry></mxCell>
+<mxCell id="c34" value="[Không]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c19" target="c27"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="651.2" y="333.8"/></Array></mxGeometry></mxCell>
+<mxCell id="c35" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c27" target="c21"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="651.2" y="384.2"/></Array></mxGeometry></mxCell>
+<mxCell id="c36" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c21" target="c22"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="290.3" y="456.8"/><mxPoint x="290.3" y="507.2"/></Array></mxGeometry></mxCell>
+<mxCell id="c37" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c22" target="c23"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c38" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c23" target="c17"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+</root>
+</mxGraphModel>
+</diagram>
+</mxfile>

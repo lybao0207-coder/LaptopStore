@@ -1,0 +1,47 @@
+<mxfile host="LaptopShop-NV1" type="device">
+<diagram id="ad04_kiem_tra_quyen" name="AD04 – Kiểm tra đăng nhập và quyền ở mỗi request (S01, S02)">
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" math="0" shadow="0">
+<root>
+<mxCell id="0"/>
+<mxCell id="1" parent="0"/>
+<mxCell id="c11" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F9FF;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="0.0" y="0.0" width="216.0" height="948.7" as="geometry"/></mxCell>
+<mxCell id="c12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FBFBF2;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="226.0" y="0.0" width="328.0" height="948.7" as="geometry"/></mxCell>
+<mxCell id="c13" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF4;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="564.0" y="0.0" width="190.0" height="948.7" as="geometry"/></mxCell>
+<mxCell id="c14" value="&lt;b&gt;Người dùng (trình duyệt)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="8.5" y="8.0" width="199.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c15" value="" style="ellipse;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="157.0" y="69.0" width="20.0" height="20.0" as="geometry"/></mxCell>
+<mxCell id="c16" value="Gửi request" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="126.0" y="114.0" width="82.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c17" value="Nhận phản hồi" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="110.0" y="830.0" width="98.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c18" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="147.0" y="891.0" width="24.0" height="24.0" as="geometry"/></mxCell>
+<mxCell id="c19" value="&lt;b&gt;Filter (Encoding, Auth, Admin)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="269.0" y="8.0" width="240.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c20" value="EncodingFilter: đặt mã hóa UTF-8 cho request/response" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="268.5" y="175.0" width="173.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c21" value="URL cần đăng nhập? (giỏ hàng, đặt hàng, hồ sơ, đơn hàng, đánh giá, /admin/*)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1"><mxGeometry x="257.0" y="236.0" width="230.0" height="100.0" as="geometry"/></mxCell>
+<mxCell id="c22" value="Session có người dùng?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1"><mxGeometry x="277.0" y="371.0" width="190.0" height="52.0" as="geometry"/></mxCell>
+<mxCell id="c23" value="Lưu URL đang truy cập, chuyển trang Đăng nhập" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FDECEA;strokeColor=#C0504D;" vertex="1" parent="1"><mxGeometry x="250.0" y="506.0" width="154.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c24" value="BiKhoa = 1?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1"><mxGeometry x="351.3" y="554.0" width="107.5" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c25" value="Hủy session, chuyển Đăng nhập + báo tài khoản bị khóa" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FDECEA;strokeColor=#C0504D;" vertex="1" parent="1"><mxGeometry x="234.5" y="713.0" width="165.0" height="44.0" as="geometry"/></mxCell>
+<mxCell id="c26" value="URL /admin/* và VaiTro khác QUAN_TRI?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1"><mxGeometry x="313.0" y="625.0" width="184.0" height="76.0" as="geometry"/></mxCell>
+<mxCell id="c27" value="Trả về trang lỗi 403" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FDECEA;strokeColor=#C0504D;" vertex="1" parent="1"><mxGeometry x="234.0" y="769.0" width="126.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c28" value="Chuyển tiếp tới Servlet xử lý" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="382.5" y="769.0" width="163.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c29" value="&lt;b&gt;CSDL (SQL Server)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="572.0" y="8.0" width="154.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c30" value="SELECT BiKhoa, VaiTro theo MaNguoiDung trong session" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#EAF4EA;strokeColor=#5E9B5E;" vertex="1" parent="1"><mxGeometry x="572.5" y="458.0" width="173.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c31" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c15" target="c16"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c32" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c16" target="c20"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c33" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c20" target="c21"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c34" value="[Không]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c21" target="c28"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="470.2" y="400.2"/><mxPoint x="500.2" y="666.2"/></Array></mxGeometry></mxCell>
+<mxCell id="c35" value="[Có]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c21" target="c22"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c36" value="[Không]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c22" target="c23"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c37" value="[Có]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c22" target="c30"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c38" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c30" target="c24"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c39" value="[Có]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c24" target="c25"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="309.8" y="659.8"/></Array></mxGeometry></mxCell>
+<mxCell id="c40" value="[Không]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c24" target="c26"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c41" value="[Có]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c26" target="c27"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="402.7" y="760.2"/><mxPoint x="379.3" y="765.8"/></Array></mxGeometry></mxCell>
+<mxCell id="c42" value="[Không]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c26" target="c28"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c43" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c23" target="c17"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c44" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c25" target="c17"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="230.8" y="765.8"/></Array></mxGeometry></mxCell>
+<mxCell id="c45" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c27" target="c17"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c46" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c28" target="c17"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="363.2" y="808.2"/></Array></mxGeometry></mxCell>
+<mxCell id="c47" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c17" target="c18"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+</root>
+</mxGraphModel>
+</diagram>
+</mxfile>

@@ -1,0 +1,38 @@
+<mxfile host="LaptopShop-NV1" type="device">
+<diagram id="ad21_xem_don_hang_admin" name="AD21 – Admin xem danh sách và chi tiết đơn hàng (UC18)">
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" math="0" shadow="0">
+<root>
+<mxCell id="0"/>
+<mxCell id="1" parent="0"/>
+<mxCell id="c11" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F9FF;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="0.0" y="0.0" width="186.0" height="801.7" as="geometry"/></mxCell>
+<mxCell id="c12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FBFBF2;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="196.0" y="0.0" width="360.0" height="801.7" as="geometry"/></mxCell>
+<mxCell id="c13" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF4;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="566.0" y="0.0" width="200.0" height="801.7" as="geometry"/></mxCell>
+<mxCell id="c14" value="&lt;b&gt;Quản trị viên&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="64.0" y="8.0" width="114.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c15" value="" style="ellipse;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="83.0" y="69.0" width="20.0" height="20.0" as="geometry"/></mxCell>
+<mxCell id="c16" value="Mở Quản lý đơn hàng; chọn lọc theo trạng thái, khoảng ngày đặt, phương thức thanh toán, tìm theo mã đơn / tên / SĐT người nhận" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="8.0" y="114.0" width="170.0" height="80.0" as="geometry"/></mxCell>
+<mxCell id="c17" value="Chọn một đơn" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="82.0" y="438.0" width="96.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c18" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="154.0" y="744.0" width="24.0" height="24.0" as="geometry"/></mxCell>
+<mxCell id="c19" value="&lt;b&gt;Hệ thống (Servlet)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="299.0" y="8.0" width="154.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c20" value="Đọc và chuẩn hóa tham số lọc; giá trị sai thì bỏ qua" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="293.0" y="219.0" width="166.0" height="44.0" as="geometry"/></mxCell>
+<mxCell id="c21" value="Hiển thị danh sách: MaDonHienThi, khách, ngày đặt, tổng tiền, trạng thái đơn, trạng thái thanh toán" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="204.0" y="357.0" width="172.0" height="56.0" as="geometry"/></mxCell>
+<mxCell id="c22" value="Đơn tồn tại?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1"><mxGeometry x="416.3" y="580.0" width="107.5" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c23" value="Về danh sách + thông báo không tìm thấy" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FDECEA;strokeColor=#C0504D;" vertex="1" parent="1"><mxGeometry x="204.5" y="667.0" width="165.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c24" value="Hiển thị chi tiết và các nút thao tác hợp lệ với trạng thái hiện tại (xác nhận, giao, hủy, đã nhận tiền)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="392.0" y="651.0" width="156.0" height="68.0" as="geometry"/></mxCell>
+<mxCell id="c25" value="&lt;b&gt;CSDL (SQL Server)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="574.0" y="8.0" width="154.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c26" value="COUNT + SELECT DonHang ... ORDER BY NgayTao DESC OFFSET/FETCH 10 dòng" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#EAF4EA;strokeColor=#5E9B5E;" vertex="1" parent="1"><mxGeometry x="574.0" y="288.0" width="184.0" height="44.0" as="geometry"/></mxCell>
+<mxCell id="c27" value="SELECT DonHang + ChiTietDonHang + LichSuTrangThaiDon + thông tin khách" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#EAF4EA;strokeColor=#5E9B5E;" vertex="1" parent="1"><mxGeometry x="573.5" y="499.0" width="177.0" height="56.0" as="geometry"/></mxCell>
+<mxCell id="c28" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c15" target="c16"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c29" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c16" target="c20"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c30" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c20" target="c26"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c31" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c26" target="c21"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c32" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c21" target="c17"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c33" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c17" target="c27"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c34" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c27" target="c22"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c35" value="[Không]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c22" target="c23"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c36" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c23" target="c21"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c37" value="[Có]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c22" target="c24"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c38" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c24" target="c18"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+</root>
+</mxGraphModel>
+</diagram>
+</mxfile>

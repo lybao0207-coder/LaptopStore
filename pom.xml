@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    LaptopShop - cấu hình Maven
+    - Java 17 (D01), Maven 3.8.3 (D03), đóng gói WAR để chạy trên Tomcat 10.1 (D04, namespace jakarta.*)
+    - Chỉ khai báo thư viện thật sự cần cho Nhiệm vụ 2 (Admin: DanhMuc, ThuongHieu).
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>vn.edu.stu</groupId>
+    <artifactId>laptopshop</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>LaptopShop</name>
+
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- Phiên bản thư viện -->
+        <jakarta.servlet.version>6.0.0</jakarta.servlet.version>     <!-- Tomcat 10.1 = Servlet 6.0 -->
+        <jstl.api.version>3.0.0</jstl.api.version>                   <!-- JSTL 3.0 (Jakarta) -->
+        <jstl.impl.version>3.0.1</jstl.impl.version>
+        <mssql.jdbc.version>13.6.2.jre11</mssql.jdbc.version>          <!-- bản jre11 dùng cho Java 11+ (JDK 17) -->
+    </properties>
+
+    <dependencies>
+        <!-- Servlet API: Tomcat đã có sẵn khi chạy -> scope provided (không đóng vào WAR) -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>${jakarta.servlet.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JSTL: Tomcat KHÔNG có sẵn -> phải đóng vào WAR -->
+        <dependency>
+            <groupId>jakarta.servlet.jsp.jstl</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+            <version>${jstl.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+            <version>${jstl.impl.version}</version>
+        </dependency>
+
+        <!-- JDBC Driver cho SQL Server (file .jar Java).
+             Lưu ý: Windows Authentication còn cần thêm file DLL native mssql-jdbc_auth-<version>-x64.dll
+             cùng phiên bản -> KHÔNG đến từ Maven, sẽ cấu hình ở bước T2. -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>${mssql.jdbc.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>laptopshop</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <release>17</release>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,34 @@
+<mxfile host="LaptopShop-NV1" type="device">
+<diagram id="ad29_tinh_gia_hien_hanh" name="AD29 – Tính giá hiện hành của sản phẩm (S03, dùng chung)">
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" math="0" shadow="0">
+<root>
+<mxCell id="0"/>
+<mxCell id="1" parent="0"/>
+<mxCell id="c11" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F9FF;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="0.0" y="0.0" width="232.0" height="708.7" as="geometry"/></mxCell>
+<mxCell id="c12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FBFBF2;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="242.0" y="0.0" width="192.0" height="708.7" as="geometry"/></mxCell>
+<mxCell id="c13" value="&lt;b&gt;Hệ thống (dịch vụ tính giá)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="9.0" y="8.0" width="214.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c14" value="" style="ellipse;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="204.0" y="69.0" width="20.0" height="20.0" as="geometry"/></mxCell>
+<mxCell id="c15" value="Có khuyến mãi hợp lệ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1"><mxGeometry x="8.0" y="268.0" width="216.0" height="52.0" as="geometry"/></mxCell>
+<mxCell id="c16" value="Giá hiện hành = giá gốc" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="8.5" y="411.0" width="151.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c17" value="Quy đổi mỗi KM ra số tiền giảm: PHAN_TRAM = giá gốc x % ; SO_TIEN = giá trị" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="47.5" y="355.0" width="177.0" height="44.0" as="geometry"/></mxCell>
+<mxCell id="c18" value="Chọn KM giảm nhiều nhất; bằng nhau thì chọn KM kết thúc sớm hơn (không cộng dồn)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="58.0" y="459.0" width="166.0" height="56.0" as="geometry"/></mxCell>
+<mxCell id="c19" value="Giá hiện hành = giá gốc - số tiền giảm (luôn &amp;gt; 0)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="60.0" y="540.0" width="158.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c20" value="" style="rhombus;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1"><mxGeometry x="49.5" y="601.0" width="25.0" height="25.0" as="geometry"/></mxCell>
+<mxCell id="c21" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="50.0" y="651.0" width="24.0" height="24.0" as="geometry"/></mxCell>
+<mxCell id="c22" value="&lt;b&gt;CSDL (SQL Server)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="269.0" y="8.0" width="154.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c23" value="Lấy GiaBan (giá bán gốc) của sản phẩm" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#EAF4EA;strokeColor=#5E9B5E;" vertex="1" parent="1"><mxGeometry x="254.5" y="114.0" width="157.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c24" value="SELECT KhuyenMai JOIN SanPhamKhuyenMai: DangHoatDong = 1 và NgayBatDau &amp;lt;= hiện tại &amp;lt;= NgayKetThuc" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#EAF4EA;strokeColor=#5E9B5E;" vertex="1" parent="1"><mxGeometry x="250.0" y="175.0" width="176.0" height="68.0" as="geometry"/></mxCell>
+<mxCell id="c25" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c14" target="c23"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c26" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c23" target="c24"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c27" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c24" target="c15"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c28" value="[Không]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c15" target="c16"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="44.3" y="351.8"/><mxPoint x="44.3" y="402.2"/></Array></mxGeometry></mxCell>
+<mxCell id="c29" value="[Có]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c15" target="c17"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c30" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c17" target="c18"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="162.7" y="407.8"/><mxPoint x="162.7" y="450.2"/></Array></mxGeometry></mxCell>
+<mxCell id="c31" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c18" target="c19"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c32" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c19" target="c20"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c33" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c16" target="c20"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="54.8" y="455.8"/></Array></mxGeometry></mxCell>
+<mxCell id="c34" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c20" target="c21"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+</root>
+</mxGraphModel>
+</diagram>
+</mxfile>

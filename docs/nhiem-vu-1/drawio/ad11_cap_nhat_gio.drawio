@@ -1,0 +1,49 @@
+<mxfile host="LaptopShop-NV1" type="device">
+<diagram id="ad11_cap_nhat_gio" name="AD11 – Xem, sửa số lượng, xóa sản phẩm trong giỏ (UC09)">
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" math="0" shadow="0">
+<root>
+<mxCell id="0"/>
+<mxCell id="1" parent="0"/>
+<mxCell id="c11" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F9FF;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="0.0" y="0.0" width="337.0" height="811.7" as="geometry"/></mxCell>
+<mxCell id="c12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FBFBF2;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="347.0" y="0.0" width="268.0" height="811.7" as="geometry"/></mxCell>
+<mxCell id="c13" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF4;strokeColor=#9DB7DE;strokeWidth=1.2;" vertex="1" parent="1"><mxGeometry x="625.0" y="0.0" width="212.0" height="811.7" as="geometry"/></mxCell>
+<mxCell id="c14" value="&lt;b&gt;Khách hàng&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="225.5" y="8.0" width="103.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c15" value="" style="ellipse;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="258.0" y="69.0" width="20.0" height="20.0" as="geometry"/></mxCell>
+<mxCell id="c16" value="Mở trang Giỏ hàng" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="207.5" y="114.0" width="121.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c17" value="Thao tác?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1"><mxGeometry x="228.3" y="503.0" width="87.5" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c18" value="Nhập số lượng mới" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="207.5" y="584.0" width="121.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c19" value="Bấm Thanh toán (xem AD12)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="8.0" y="584.0" width="178.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c20" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="85.0" y="669.0" width="24.0" height="24.0" as="geometry"/></mxCell>
+<mxCell id="c21" value="&lt;b&gt;Hệ thống (Servlet)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="355.0" y="8.0" width="154.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c22" value="Tính giá hiện hành (S03), thành tiền từng dòng, tổng tiền (miễn phí vận chuyển)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="365.5" y="236.0" width="167.0" height="44.0" as="geometry"/></mxCell>
+<mxCell id="c23" value="Có dòng SP ngừng bán hoặc vượt tồn kho?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1"><mxGeometry x="355.0" y="305.0" width="252.0" height="52.0" as="geometry"/></mxCell>
+<mxCell id="c24" value="Đánh dấu dòng lỗi, khóa nút Thanh toán" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FFFFFF;strokeColor=#5B7DB1;" vertex="1" parent="1"><mxGeometry x="355.0" y="392.0" width="152.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c25" value="" style="rhombus;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1"><mxGeometry x="418.5" y="453.0" width="25.0" height="25.0" as="geometry"/></mxCell>
+<mxCell id="c26" value="1 &amp;lt;= số lượng &amp;lt;= min(5, tồn kho)?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1"><mxGeometry x="355.0" y="655.0" width="206.0" height="52.0" as="geometry"/></mxCell>
+<mxCell id="c27" value="Báo lỗi số lượng" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#FDECEA;strokeColor=#C0504D;" vertex="1" parent="1"><mxGeometry x="477.0" y="742.0" width="106.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c28" value="&lt;b&gt;CSDL (SQL Server)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;" vertex="1" parent="1"><mxGeometry x="655.0" y="8.0" width="154.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c29" value="SELECT GioHang JOIN SanPham theo MaNguoiDung" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#EAF4EA;strokeColor=#5E9B5E;" vertex="1" parent="1"><mxGeometry x="651.0" y="175.0" width="178.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c30" value="UPDATE GioHang SET SoLuong, NgayCapNhat" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#EAF4EA;strokeColor=#5E9B5E;" vertex="1" parent="1"><mxGeometry x="681.0" y="742.0" width="148.0" height="36.0" as="geometry"/></mxCell>
+<mxCell id="c31" value="DELETE GioHang WHERE MaGioHang = ? AND MaNguoiDung = ? (chỉ dòng của chính khách)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#EAF4EA;strokeColor=#5E9B5E;" vertex="1" parent="1"><mxGeometry x="633.0" y="574.0" width="172.0" height="56.0" as="geometry"/></mxCell>
+<mxCell id="c32" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c15" target="c16"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c33" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c16" target="c29"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c34" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c29" target="c22"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c35" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c22" target="c23"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c36" value="[Có]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c23" target="c24"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c37" value="[Không]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c23" target="c25"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="510.2" y="431.2"/></Array></mxGeometry></mxCell>
+<mxCell id="c38" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c24" target="c25"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c39" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c25" target="c17"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c40" value="[Sửa số lượng]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c17" target="c18"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c41" value="[Xóa dòng]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c17" target="c31"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c42" value="[Thanh toán]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c17" target="c19"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c43" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c18" target="c26"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c44" value="[Không]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c26" target="c27"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c45" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c27" target="c29"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="564.2" y="684.2"/></Array></mxGeometry></mxCell>
+<mxCell id="c46" value="[Có]" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c26" target="c30"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c47" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c30" target="c29"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="808.2" y="633.2"/></Array></mxGeometry></mxCell>
+<mxCell id="c48" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c31" target="c29"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="c49" value="" style="endArrow=block;endFill=1;html=1;curved=1;fontSize=10;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="c19" target="c20"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+</root>
+</mxGraphModel>
+</diagram>
+</mxfile>

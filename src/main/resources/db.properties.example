@@ -1,0 +1,22 @@
+# =====================================================================
+# MẪU cấu hình kết nối SQL Server cho LaptopShop.
+# Cách dùng: sao chép file này thành db.properties (cùng thư mục) rồi sửa cho đúng máy của bạn.
+# Dùng Windows Authentication (D06): KHÔNG có tên đăng nhập / mật khẩu trong file.
+# Tài khoản Windows đang chạy Tomcat chính là tài khoản đăng nhập SQL Server.
+# =====================================================================
+
+# Tên máy chủ SQL Server (máy cá nhân: localhost)
+db.server=localhost
+
+# Cổng TCP của SQL Server (mặc định 1433). Phải bật TCP/IP trong SQL Server Configuration Manager.
+db.port=1433
+
+# Tên database đã tạo bằng database/01_create_database.sql
+db.name=CuaHangLaptop
+
+# Mã hóa đường truyền. Driver 10.2 trở lên mặc định encrypt=true.
+db.encrypt=true
+
+# true = tin chứng chỉ tự ký của SQL Server cài trên máy cá nhân.
+# CHỈ dùng cho môi trường phát triển local, không dùng khi triển khai thật.
+db.trustServerCertificate=true

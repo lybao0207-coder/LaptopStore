@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    LaptopShop - cấu hình ứng dụng web (Jakarta EE 10 / Servlet 6.0 cho Tomcat 10.1)
+    - Servlet và Filter sẽ khai báo bằng annotation (@WebServlet, @WebFilter) ở các bước sau.
+    - Không khai báo welcome-file: trang chủ thuộc phần User (thành viên còn lại).
+-->
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>LaptopShop</display-name>
+
+    <!-- Mọi file JSP và đoạn layout dùng chung (.jspf) mặc định dùng UTF-8 để hiển thị đúng tiếng Việt -->
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <url-pattern>*.jspf</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
+
+    <!-- Phiên làm việc hết hạn sau 30 phút không thao tác -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+</web-app>

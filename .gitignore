@@ -1,0 +1,33 @@
+
+# Maven build output
+target/
+
+# Local database configuration - do not commit
+src/main/resources/db.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Smart Tomcat local configuration
+.smarttomcat/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# NetBeans
+/nbproject/private/
+
+# Logs
+*.log
+logs/
+
+# Windows / macOS
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
